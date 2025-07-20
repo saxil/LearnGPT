@@ -1,5 +1,8 @@
 streamlit
 langchain
+langchain-community
 chromadb
 ollama
 openrouter-client
+unstructured
+python-magic-bin
