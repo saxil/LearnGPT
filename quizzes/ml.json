@@ -1,0 +1,22 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is a common application of machine learning?",
+      "options": [
+        "Image recognition",
+        "Data storage",
+        "Web design"
+      ],
+      "answer": "Image recognition"
+    },
+    {
+      "question": "What is the goal of regression in machine learning?",
+      "options": [
+        "To predict a continuous value",
+        "To classify data into categories",
+        "To cluster data into groups"
+      ],
+      "answer": "To predict a continuous value"
+    }
+  ]
+}

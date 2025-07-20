@@ -1,0 +1,106 @@
+
+📘 PRD: LearnGPT – AI Tutor with Modules
+
+🧠 Overview
+LearnGPT is an AI-powered learning platform that delivers structured, interactive courses on topics like ML, SQL, and System Design. It uses LLMs, RAG, and quizzes to help users learn progressively.
+
+🎯 Objectives
+- Deliver AI-curated lessons
+- Test understanding with quizzes and checkpoints
+- Provide tutoring through conversational AI
+- Track user progress and offer certification
+- Be easy to host, use, and expand
+
+👥 Target Audience
+- Students and self-learners
+- Junior developers exploring tech topics
+- Colleges, EdTechs, Bootcamps
+
+🧱 Core Features
+
+1. Lesson Modules
+- Markdown/JSON based
+- Each includes: title, content, examples, and quiz
+
+2. Quiz Engine
+- 3–5 MCQs or short answers
+- Pass to unlock next lesson
+- Retry logic
+
+3. AI Tutor
+- Ollama or OpenRouter powered
+- RAG using LangChain + Chroma
+- Context-aware answers
+
+4. Progress Tracker
+- Visual progress bar
+- Badge/certificate (v1.1)
+
+5. Module Selector
+- Courses like:
+  - Intro to ML
+  - SQL from Scratch
+  - Prompt Engineering
+  - System Design Basics
+
+⚙️ Tech Stack
+
+Layer        | Tools
+-------------|-------------------------------
+Frontend     | Streamlit or Next.js
+Backend      | Python + LangChain
+LLM          | Ollama (local) / OpenRouter API
+Storage      | Markdown + ChromaDB
+Quiz Logic   | Python + JSON/YAML
+Auth (v1.2)  | OAuth / Supabase (optional)
+
+🗂 Project Structure
+learn-gpt/
+├── app/
+│   ├── main.py
+│   ├── pages/
+│   └── components.py
+├── modules/
+│   ├── sql.md
+│   └── ml.md
+├── quizzes/
+│   ├── sql.json
+│   └── ml.json
+├── llm/
+│   └── tutor_agent.py
+├── vectorstore/
+│   └── chroma/
+└── utils/
+    └── checker.py
+
+🗺 User Flow
+1. Home → pick a module
+2. Lesson → view content → take quiz
+3. Quiz → pass → unlock next
+4. Ask Tutor → use LLM for doubts
+5. Track Progress → view completion
+
+🚀 Deployment Plan
+
+Task           | Platform/Tool
+----------------|-------------------------
+Local LLM      | Ollama
+Vector Store   | ChromaDB
+App Hosting    | Streamlit Cloud / Railway
+Domain         | learn.yourdomain.tech
+Scheduler      | UptimeRobot / cronjobs
+
+📅 Milestones
+
+Phase | Goals                              | ETA
+------|------------------------------------|-----
+v0.1  | UI + module viewer + quiz flow     | 2d
+v0.2  | Add AI tutor (RAG), 2 sample mods  | 5d
+v0.3  | Progress tracker, multi-course     | 7d
+v0.4  | Domain deploy, cert export         | 10d
+
+🧩 Optional Add-ons (v1.1+)
+- Login with Supabase
+- Lesson summaries
+- Peer discussions
+- Upload-your-own module
